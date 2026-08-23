@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: lenskart-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 -u run_bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ALLOWED_USER_ID
+        sync: false
+    plan: free
